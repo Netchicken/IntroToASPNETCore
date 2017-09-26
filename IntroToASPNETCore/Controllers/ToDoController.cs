@@ -20,16 +20,15 @@ namespace IntroToASPNETCore.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            // Get to-do items from database
+            // todo Get to-do items from database
             var toDoItems = await _todoItemService.GetIncompleteItemsAsync();
 
-            // Put items into a model
-
+            // todo Put items into a model
             var model = new ToDoViewModel
             {
                 Items = toDoItems
             };
-            // Pass the view to a model and render
+            //todo Pass the view to a model and render
             return View(model);
         }
     }
