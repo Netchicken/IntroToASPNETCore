@@ -27,7 +27,11 @@ namespace IntroToASPNETCore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //connection string for the ToDo DB
+            services.AddDbContext<ToDoContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("ToDoConnection")));
 
+            //connection string for the IDentity DB
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -38,9 +42,6 @@ namespace IntroToASPNETCore
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
-
-
-
             services.AddMvc();
             services.AddScoped<ITodoItemService, FakeTodoItemService>();
         }

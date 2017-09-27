@@ -8,6 +8,7 @@ namespace IntroToASPNETCore.Services
 {
     public class FakeTodoItemService : ITodoItemService
     {
+        // public Task<IEnumerable<ToDoItem>> GetIncompleteItemsAsync()
         public Task<IEnumerable<ToDoItem>> GetIncompleteItemsAsync()
         {
             // Return an array of TodoItems
