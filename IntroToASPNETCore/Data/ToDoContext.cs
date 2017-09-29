@@ -13,11 +13,5 @@ namespace IntroToASPNETCore.Data
         {
         }
         public DbSet<ToDoItem> Items { get; set; }
-
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<ToDoItem>().ToTable("Item");
-
-        //}
     }
 }
