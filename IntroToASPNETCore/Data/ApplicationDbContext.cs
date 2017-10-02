@@ -14,7 +14,7 @@ namespace IntroToASPNETCore.Data
             : base(options)
         {
         }
-
+        //   public DbSet<ToDoItem> Items { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

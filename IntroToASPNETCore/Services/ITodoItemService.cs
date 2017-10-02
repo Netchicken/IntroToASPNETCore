@@ -9,5 +9,9 @@ namespace IntroToASPNETCore.Services
     public interface ITodoItemService
     {
         Task<IEnumerable<ToDoItem>> GetIncompleteItemsAsync();
+
+        Task<bool> AddItemAsync(NewToDoItem newItem);
+
+        Task<bool> MarkDoneAsync(Guid id);
     }
 }

@@ -25,6 +25,16 @@ namespace IntroToASPNETCore.Services
                 }             };
             return Task.FromResult(items);
         }
+
+        public Task<bool> AddItemAsync(NewToDoItem newItem)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> MarkDoneAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

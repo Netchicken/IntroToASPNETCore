@@ -18,6 +18,7 @@ namespace IntroToASPNETCore.Controllers
         {
             _todoItemService = todoItemService;
         }
+
         public async Task<IActionResult> Index()
         {
             // todo Get to-do items from database
@@ -31,5 +32,32 @@ namespace IntroToASPNETCore.Controllers
             //todo Pass the view to a model and render
             return View(model);
         }
+
+        public async Task<IActionResult> AddItem(NewToDoItem newItem)
+        {
+            if (!ModelState.IsValid) //if the model returns an error
+            { //do stuff
+                return BadRequest(ModelState);
+            }
+            //check if the adding is successful (we still need to add AddItemAsync)
+            bool IsSuccessful = await _todoItemService.AddItemAsync(newItem);
+            if (!IsSuccessful) //if it fails
+            {
+                return BadRequest(new { error = "Could not add item" });
+            }
+            //otherwise, if it works return OK result
+            return Ok();
+        }
+        public async Task<IActionResult> MarkDone(Guid id)
+        {
+            if (id == Guid.Empty) return BadRequest();
+            var successful = await _todoItemService.MarkDoneAsync(id);
+            if (!successful) return BadRequest();
+            return Ok();
+        }
+
+
+
     }
+
 }
