@@ -9,6 +9,11 @@ namespace IntroToASPNETCore.Services
     public class FakeTodoItemService : ITodoItemService
     {
         // public Task<IEnumerable<ToDoItem>> GetIncompleteItemsAsync()
+        public Task<IEnumerable<ToDoItem>> GetIncompleteItemsAsync(ApplicationUser user)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<IEnumerable<ToDoItem>> GetIncompleteItemsAsync()
         {
             // Return an array of TodoItems
@@ -26,12 +31,12 @@ namespace IntroToASPNETCore.Services
             return Task.FromResult(items);
         }
 
-        public Task<bool> AddItemAsync(NewToDoItem newItem)
+        public Task<bool> AddItemAsync(NewToDoItem newItem, ApplicationUser user)
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> MarkDoneAsync(Guid id)
+        public Task<bool> MarkDoneAsync(Guid id, ApplicationUser user)
         {
             throw new NotImplementedException();
         }

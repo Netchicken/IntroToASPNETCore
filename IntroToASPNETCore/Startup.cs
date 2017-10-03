@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using IntroToASPNETCore.Services;
 using IntroToASPNETCore.Data;
 using IntroToASPNETCore.Models;
-using IntroToASPNETCore.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
