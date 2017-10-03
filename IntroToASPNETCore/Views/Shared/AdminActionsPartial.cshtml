@@ -1,0 +1,24 @@
+﻿
+@using Microsoft.AspNetCore.Identity
+@using IntroToASPNETCore.Models
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{ //If the user is signed in the pass across the current user
+    var currentUser = await UserManager.GetUserAsync(User);
+    //if the current user is Admin and not null then return a True
+    var isAdmin = currentUser != null
+            && await UserManager.IsInRoleAsync(currentUser, Constants.AdministratorRole);
+    //if there is an admin = true then load the code
+    if (isAdmin)
+    {
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a asp-controller="ManageUsers" asp-action="Index">
+                    Manage Users
+                </a>
+            </li>
+        </ul>
+    }
+}

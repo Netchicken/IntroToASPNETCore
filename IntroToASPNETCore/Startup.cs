@@ -91,15 +91,17 @@ namespace IntroToASPNETCore
         {
             var testAdmin = await userManager.Users
                 .Where(x => x.UserName == "admin@todo.local").SingleOrDefaultAsync();
+            //if there is an admin then don't create one
             if (testAdmin != null) return;
 
+            //create an admin
             testAdmin = new ApplicationUser
             {
                 UserName = "admin@todo.local",
                 Email = "admin@todo.local"
             };
-            await userManager.CreateAsync(testAdmin, "NotSecure123!!");
-            await userManager.AddToRoleAsync(testAdmin, Constants.AdministratorRole);
+            await userManager.CreateAsync(testAdmin, "NotSecure123!!");//give it a PW
+            await userManager.AddToRoleAsync(testAdmin, Constants.AdministratorRole); //give it an admin role
         }
     }
 }
