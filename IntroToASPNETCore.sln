@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntroToASPNETCore", "IntroToASPNETCore\IntroToASPNETCore.csproj", "{5FA98190-DD68-4DFC-BAA1-C78EB30DE1F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{5C575252-84BB-4A78-8DD7-27375C1F6394}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTest", "IntegrationTest\IntegrationTest.csproj", "{4AC59ED6-B49F-4E8F-B06B-422182F5A128}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{5FA98190-DD68-4DFC-BAA1-C78EB30DE1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FA98190-DD68-4DFC-BAA1-C78EB30DE1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FA98190-DD68-4DFC-BAA1-C78EB30DE1F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C575252-84BB-4A78-8DD7-27375C1F6394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C575252-84BB-4A78-8DD7-27375C1F6394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C575252-84BB-4A78-8DD7-27375C1F6394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C575252-84BB-4A78-8DD7-27375C1F6394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AC59ED6-B49F-4E8F-B06B-422182F5A128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AC59ED6-B49F-4E8F-B06B-422182F5A128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AC59ED6-B49F-4E8F-B06B-422182F5A128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AC59ED6-B49F-4E8F-B06B-422182F5A128}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
